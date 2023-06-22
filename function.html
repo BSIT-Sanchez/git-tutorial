@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Rock Paper Scissors</h1>
+
+  <button onclick="myGames('Rock');">Rock</button>
+  <button onclick="myGames('Paper');">Paper</button>
+  <button onclick="myGames('Scissor');">Scissors</button>
+
+
+  <script>
+  
+    function getComputerMove(){
+      const randomNumber = Math.random();
+
+      let computerMove = '';
+
+      if(randomNumber >= 0 && randomNumber < 0.3){
+        computerMove = 'Rock';
+      }else if(randomNumber >= 0.3 && randomNumber < 0.6){
+        computerMove = 'Paper';
+
+      }else if(randomNumber >= 0.6 && randomNumber < 1){
+        computerMove = 'Scissor';
+      }
+      return computerMove;
+    }
+
+    function myGames(playerMove){
+      const computerMove = getComputerMove();
+
+      let result = '';
+      //rock
+      if(playerMove === 'Rock'){
+        if(computerMove === 'Rock'){
+          result = `It's a Tie`;
+        }
+        else if(computerMove === 'Paper'){
+          result = 'I loss';
+        }
+        else if(computerMove === 'Scissor'){
+          result = 'I win';
+        }
+        alert(`I picked ${playerMove}. computer Picked ${computerMove}. Result ${result}`);
+      }
+      //paper
+      if(playerMove === 'Paper'){
+        if(computerMove === 'Paper'){
+          result = `It's a Tie`;
+        }
+        else if(computerMove === 'Rock'){
+          result = 'I win';
+        }
+        else if(computerMove === 'Scissor'){
+          result = 'I loss';
+        }
+        alert(`I picked ${playerMove}. computer Picked ${computerMove}. Result ${result}`);
+      }
+      //scissor
+      if(playerMove === 'Scissor'){
+        if(computerMove === 'Scissor'){
+          result = `It's a Tie`;
+        }
+        else if(computerMove === 'Rock'){
+          result = 'I loss';
+        }
+        else if(computerMove === 'Paper'){
+          result = 'I win';
+        }
+        alert(`I picked ${playerMove}. computer Picked ${computerMove}. Result ${result}`);
+      }
+
+    }
+
+
+  </script>
+  
+</body>
+</html>

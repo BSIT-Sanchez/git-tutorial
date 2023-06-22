@@ -6,6 +6,36 @@
     <title>contact</title>
 </head>
 <body>
+    <h1>Rock ppaer scissors</h1>
+    <button onclick="
+        const randomNumber = Math.random();
+
+        let computerMove = '';
+            if(randomNumber >= 0 && randomNumber < 0.3){
+                computerMove = 'rock';
+            }else if (randomNumber >= 0.3 && randomNumber < 0.6){
+                computerMove = 'paper';
+            }else if (randomNumber >= 0.6 && randomNumber < 1){
+                computerMove = 'scissors';
+            }
+            console.log(computerMove);
+            
+            let result = '';
+            if(computerMove === 'rock'){
+                result = 'Ties';
+            }else if (computerMove === 'paper'){
+                result = 'you loss';
+
+            }else if (computerMove === 'scissors'){
+                result = ' you win'
+            }
+            alert(`you picked rock.computer picked ${computerMove}. ${result}`);
     
+    ">Rock</button>
+    <button>Paper</button>
+    <button>scissors</button>
+    <script>
+    
+    </script>
 </body>
 </html>

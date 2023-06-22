@@ -6,6 +6,67 @@
     <title>signup</title>
 </head>
 <body>
+    <h1>Rock Paper Scissors</h1>
+    <!-- Rock-->
+    <button onclick="
+        const randomNumber = Math.random();
+
+        let computerMove = '';
+        if(randomNumber >= 0 && randomNumber < 0.3){
+            computerMove = 'Rock';
+        }else if(randomNumber >= 0.3 && randomNumber < 0.6){
+            computerMove = 'Paper';
+        }else if(randomNumber >= 0.6 && randomNumber < 1){
+            computerMove = 'Scissors';
+        }
     
+
+        let result = '';
+        if(computerMove === 'Rock'){
+            result = `It's Ties`
+        }else if(computerMove === 'Paper'){
+            result = 'I lose';
+        }else if(computerMove === 'Scissors'){
+            result = 'I win';
+        }
+        
+        alert(`i picked rock .computer picked ${computerMove}  ${result}`);
+
+
+
+    ">Rock</button>
+
+    <!--Paper-->
+    <button onclick="
+        const randNumber = Math.random();
+
+        let comMove = '';
+        if(randNumber >=0 && randNumber < 0.3){
+            comMove = 'Rock';
+        }else if(randNumber >= 0.3 && randNumber < 0.6){
+            comMove = 'Paper';
+        }else if(randNumber >= 0.6 && randNumber< 1){
+            comMove = 'Scissors';
+        }
+    
+
+        let myMoves = '';
+        if(comMove === 'Rock'){
+            myMoves = 'I win';
+        }else if(comMove === 'paper'){
+            myMoves = `It's Ties`;
+        }else if(comMove === 'Scissors'){
+            myMoves = 'I loss';
+        }
+        alert(`i picked paper and computer picked ${comMove}. ${myMoves}`)
+
+    ">Paper
+
+    </button>
+
+
+    <script>
+
+    </script>
 </body>
 </html>
